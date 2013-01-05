@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <NSURLConnectionDataDelegate>
+
+@property (nonatomic, weak) IBOutlet UITextField *campoNome;
+@property (nonatomic, weak) IBOutlet UITextField *campoSenha;
+@property (nonatomic, weak) IBOutlet UILabel *status;
+
+
+-(IBAction)cadastrarUsuario:(id)sender;
+-(IBAction)realizarLogin:(id)sender;
 
 @end
